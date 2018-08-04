@@ -1,0 +1,16 @@
+extends ./layout.jade
+
+block myHeadBlock
+	title The Expense App
+	
+block myBodyBlock
+	h3 The Expense App login
+	form(name="login", action="/login" method="post")
+		input(type="text", name="username", placeholder="username")
+		br 
+		input(type="password", name="password", placeholder="password")
+		br/ 
+		br/
+		input(type="submit", value="login")
+	if message
+		p #{message}
